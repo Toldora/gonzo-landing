@@ -7,13 +7,12 @@ import '@/js/global-state';
 import '@/js/modal';
 import { setWheelLastStage } from '@/js/wheel';
 import '@/js/sign-up';
-import '@/js/sidebar';
 import '@/js/terms-and-privacy';
-import { openSignUpModal } from '@/js/sign-up';
 import useViewportSizes from '@/js/use-viewport-sizes';
 import { getFromLS } from '@/js/local-storage';
+import { openLoginModal } from './js/login';
 
-const signUpBtnRef = document.querySelector('.js-sign-up-btn');
+const loginBtnRef = document.querySelector('.js-login-btn');
 
 useViewportSizes();
 
@@ -24,4 +23,4 @@ const isLastStage = getFromLS('isLastStage');
 //   openSignUpModal({ isBlocked: true });
 // }
 
-signUpBtnRef.addEventListener('click', openSignUpModal);
+loginBtnRef.addEventListener('click', openLoginModal);

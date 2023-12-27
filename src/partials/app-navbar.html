@@ -1,49 +1,24 @@
 <header class="app-navbar">
   <div class="app-navbar__container container">
     <a class="app-navbar__logo-link" href="#" aria-label="Home page">
-      {{> svg-icon class='app-navbar__logo--large' width="180" height="35"
-      name='logo-large' }} {{> svg-icon class='app-navbar__logo--small'
-      width="40" height="40" name='logo-small' }}
+      {{> svg-icon class='app-navbar__logo' width="162" height="32" name='logo'
+      }}
     </a>
 
-    <div class="app-navbar__divider"></div>
+    <div class="app-navbar__tries-wrapper">
+      <span>Tentativas restantes:</span>
+      <span class="app-navbar__tries js-bonus-tries">2</span>
+    </div>
 
-    <ul class="app-navbar__nav-list">
-      <li class="app-navbar__nav-list-item">
-        <button
-          class="js-terms-btn"
-          type="button"
-          aria-label="Abrir Termos e condições"
-        >
-          Termos e condições
-        </button>
-      </li>
-      <li class="app-navbar__nav-list-item">
-        <button
-          class="js-privacy-policy-btn"
-          type="button"
-          aria-label="Abrir Política de Privacidade"
-        >
-          Política de Privacidade
-        </button>
-      </li>
-    </ul>
-
-    <button
-      class="app-navbar__sign-up-btn app-button js-sign-up-btn"
-      type="button"
-      aria-label="Inscrever-se"
-    >
-      Inscrever-se
-    </button>
-    <button
-      class="app-navbar__burger-btn js-burger-btn"
-      type="button"
-      aria-label="Menu"
-    >
-      <span class="app-navbar__burger-btn-content">
-        <span class="app-navbar__burger-btn-block"></span>
-      </span>
-    </button>
+    <div class="app-navbar__login-btn-wrapper">
+      <p>Ja tem uma conta?</p>
+      <button
+        class="app-navbar__login-btn js-login-btn"
+        type="button"
+        aria-label="Vá para login"
+      >
+        Ir para o site!
+      </button>
+    </div>
   </div>
 </header>

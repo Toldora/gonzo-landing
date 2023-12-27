@@ -12,9 +12,12 @@
   --col-total-black: #{$col-total-black};
   --col-total-black-rgb: #{$col-total-black-rgb};
 
-  --col-dark-tone-ink: #{$col-dark-tone-ink};
   --col-tibetan-yellow: #{$col-tibetan-yellow};
   --col-nuclear-fallout: #{$col-nuclear-fallout};
+  --col-red: #{$col-red};
+  --col-pantone: #{$col-pantone};
+  --col-irradiated-green: #{$col-irradiated-green};
+  --col-pcb-green: #{$col-pcb-green};
   --col-key-lime: #{$col-key-lime};
   --col-gordons-green: #{$col-gordons-green};
   --col-kuro-green: #{$col-kuro-green};
@@ -27,15 +30,13 @@
   --z-modal-overlay: 14;
   --z-modal: 9;
   --z-app-navbar: 7;
-  --z-app-sidebar: 4;
-  --z-sidebar-overlay: 2;
   --z-wheel: 2;
   --z-default: 1;
   --z-hidden: -1;
 
   // Text variables
   /* stylelint-disable max-line-length */
-  --primary-font-family: 'Montserrat', -apple-system, 'BlinkMacSystemFont',
+  --primary-font-family: 'Open Sans', -apple-system, 'BlinkMacSystemFont',
     'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue',
     sans-serif;
   --secondary-font-family: 'Ubuntu', -apple-system, 'BlinkMacSystemFont',
@@ -85,7 +86,6 @@
 
   // App navbar
   --app-navbar-height: #{to-rem(70)};
-  --app-navbar-burger-btn-bg: rgba(#{$col-total-white-rgb}, 15%);
 
   @include respond-above(tablet) {
     --app-navbar-height: #{clamp(to-rem(80), vh(11.4), to-rem(100))};
