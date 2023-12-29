@@ -3,6 +3,7 @@ import { globalState } from '@/js/global-state';
 import { openSignUpModal } from '@/js/sign-up';
 
 const wheelRef = document.querySelector('.js-wheel');
+const spinWheelBtnRef = document.querySelector('.js-spin-wheel-btn');
 const bonusesSectionRef = document.querySelector('.js-bonuses-section');
 const bonusTriesRef = document.querySelector('.js-bonus-tries');
 const bodyRef = document.body;
@@ -82,3 +83,4 @@ export const setWheelLastStage = () => {
 };
 
 wheelRef.addEventListener('click', onClickWheel);
+spinWheelBtnRef.addEventListener('click', onClickWheel);

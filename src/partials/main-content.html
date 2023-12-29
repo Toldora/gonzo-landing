@@ -1,1 +1,12 @@
-<main class="main container">{{> bonuses-section}} {{> wheel }}</main>
+<main class="main container">
+  {{> bonuses-section}} {{> wheel }}
+  <button
+    class="main__cta-btn js-spin-wheel-btn"
+    type="button"
+    aria-label="Gire e gahne"
+  >
+    {{> svg-icon class='main__cta-btn-icon' width="32" height="33"
+    name='arrows'}}
+    <span>Gire e gahne</span>
+  </button>
+</main>
