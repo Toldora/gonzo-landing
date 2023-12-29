@@ -2,7 +2,7 @@
   min-height: to-rem(40);
   padding: 0 to-rem(24);
   background-color: var(--col-tibetan-yellow);
-  color: var(--col-total-white);
+  color: var(--col-total-black);
   box-shadow: none;
   border-radius: to-rem(5);
   font-size: to-rem(14);
@@ -23,7 +23,7 @@
 
   @include hover {
     &:not(:disabled):not(.app-button--disabled) {
-      background-color: var(--col-total-white);
+      background-color: var(--col-total-black);
     }
   }
 }

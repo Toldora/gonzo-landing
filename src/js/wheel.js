@@ -56,7 +56,9 @@ const onClickWheel = () => {
         globalState.wheelStage += 1;
 
         // setToLS('isLastStage', globalState.isLastStage);
-        openSignUpModal({ isBlocked: true });
+        setTimeout(() => {
+          openSignUpModal({ isBlocked: true });
+        }, 500);
 
         break;
 

@@ -15,10 +15,12 @@
   --col-tibetan-yellow: #{$col-tibetan-yellow};
   --col-nuclear-fallout: #{$col-nuclear-fallout};
   --col-red: #{$col-red};
+  --col-burtuqali-orange: #{$col-burtuqali-orange};
   --col-pantone: #{$col-pantone};
   --col-irradiated-green: #{$col-irradiated-green};
   --col-pcb-green: #{$col-pcb-green};
-  --col-key-lime: #{$col-key-lime};
+  --col-algal-fuel: #{$col-algal-fuel};
+  --col-algal-fuel-rgb: #{$col-algal-fuel-rgb};
   --col-gordons-green: #{$col-gordons-green};
   --col-kuro-green: #{$col-kuro-green};
   --col-rich-olive: #{$col-rich-olive};
@@ -46,7 +48,7 @@
 
   --p-size: #{to-rem(14)};
 
-  @include respond-above(medium) {
+  @include respond-above(tablet) {
     --p-size: #{to-rem(18)};
   }
 
