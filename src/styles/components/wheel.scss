@@ -32,33 +32,18 @@
   cursor: default;
 
   @media (orientation: landscape) {
-    --size: #{min(46vw, vh(74))};
-
+    position: absolute;
+    top: calc(45% - var(--wheel-size-landscape) / 2);
+    left: calc(50% - var(--wheel-size-landscape) / 2);
     height: 0;
     flex-grow: 1;
-    max-width: var(--size);
-    padding-bottom: var(--size);
-
-    @include respond-above(xmedium) {
-      --size: #{min(46vw, vh(66))};
-    }
-
-    @include respond-above(large) {
-      --size: #{min(46vw, vh(76))};
-    }
+    max-width: var(--wheel-size-landscape);
+    padding-bottom: var(--wheel-size-landscape);
   }
 
   @media (orientation: portrait) {
     width: 100%;
-    max-width: min(90vw, vh(72));
-
-    @include respond-above(small) {
-      max-width: min(82vw, vh(55));
-    }
-
-    @include respond-above(tablet) {
-      max-width: min(85vw, vh(46));
-    }
+    max-width: var(--wheel-size-portrait);
   }
 
   @include hover {
@@ -97,7 +82,6 @@
   }
 
   .wheel-stage-3 & {
-    // animation-name: wheel-shake-2;
     transform: translate(-50%, -50%) rotate(-180deg);
   }
 

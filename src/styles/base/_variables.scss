@@ -33,7 +33,8 @@
   --z-modal: 9;
   --z-app-navbar: 7;
   --z-wheel-btn: 4;
-  --z-wheel: 2;
+  --z-wheel: 3;
+  --z-maskot-decor: 2;
   --z-default: 1;
   --z-hidden: -1;
 
@@ -88,10 +89,16 @@
   --scrollbar-color: var(--primary-text-color);
 
   // App navbar
-  --app-navbar-height: #{to-rem(120)};
+  @media (orientation: portrait) {
+    --app-navbar-height: #{to-rem(120)};
+  }
 
-  @include respond-above(tablet) {
-    --app-navbar-height: #{clamp(to-rem(80), vh(11.4), to-rem(100))};
+  @media (orientation: landscape) {
+    --app-navbar-height: #{to-rem(80)};
+
+    @include respond-above(tablet) {
+      --app-navbar-height: #{clamp(to-rem(100), vh(11.4), to-rem(120))};
+    }
   }
 
   // App overlay
@@ -100,4 +107,25 @@
   // Auth type radio
   --auth-type-radio-bg-hover: rgba(#{$col-total-white-rgb}, 15%);
   --auth-type-radio-bg-checked: rgba(#{$col-total-white-rgb}, 35%);
+
+  // Wheel
+  @media (orientation: portrait) {
+    --wheel-size-portrait: #{min(90vw, vh(48))};
+
+    @include respond-above(small) {
+      --wheel-size-portrait: #{min(82vw, vh(55))};
+    }
+
+    @include respond-above(tablet) {
+      --wheel-size-portrait: #{min(85vw, vh(46))};
+    }
+  }
+
+  @media (orientation: landscape) {
+    --wheel-size-landscape: #{min(46vw, vh(74))};
+
+    @include respond-above(xmedium) {
+      --wheel-size-landscape: #{min(46vw, vh(66))};
+    }
+  }
 }

@@ -1,16 +1,8 @@
 .main {
-  --padding: #{clamp(to-rem(22), vh(3.5), to-rem(32))};
-
+  position: relative;
+  height: calc(100% - var(--app-navbar-height));
   display: flex;
   align-items: center;
-  padding-top: var(--padding);
-  padding-bottom: var(--padding);
-
-  @media (orientation: landscape) {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
 
   @media (orientation: portrait) {
     flex-direction: column;
@@ -18,9 +10,15 @@
 }
 
 .main__cta-btn {
+  position: relative;
+  z-index: var(--z-wheel-btn);
   height: to-rem(60);
   width: 100%;
-  max-width: to-rem(400);
+  max-width: min(
+    var(--wheel-size-portrait, var(--wheel-size-landscape)),
+    to-rem(400)
+  );
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,16 +33,19 @@
   font-size: to-rem(24);
   text-transform: uppercase;
   cursor: default;
+  transform: translateY(-50%);
   transition: box-shadow var(--hover-transition),
     transform var(--hover-transition);
 
-  @include respond-above(tablet) {
-    height: to-rem(80);
+  @media (orientation: landscape) {
     position: absolute;
-    z-index: var(--z-wheel-btn);
-    bottom: 20%;
+    top: calc(45% + var(--wheel-size-landscape) / 2);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+
+    @include respond-above(medium) {
+      height: to-rem(80);
+    }
   }
 
   @include hover {
@@ -53,8 +54,10 @@
       box-shadow: 0 to-rem(4) to-rem(40) 0 var(--col-pantone);
       cursor: pointer;
 
+      transform: translateY(-50%) scale(1.1);
+
       @include respond-above(tablet) {
-        transform: translateX(-50%) scale(1.1);
+        transform: translate(-50%, -50%) scale(1.1);
       }
 
       .main__cta-btn-icon {
@@ -67,4 +70,29 @@
 .main__cta-btn-icon {
   margin-right: to-rem(18);
   transition: transform var(--hover-transition);
+}
+
+.main__maskot-decor {
+  position: relative;
+  z-index: var(--z-maskot-decor);
+  user-select: none;
+
+  @media (orientation: portrait) {
+    width: max(vh(30), to-rem(217));
+    margin-top: auto;
+    transform: translateY(min(vh(3) * -1, -20%));
+  }
+
+  @media (orientation: landscape) {
+    position: absolute;
+    top: min(30% + var(--wheel-size-landscape) / 2, 62%);
+    left: calc(50% + var(--wheel-size-landscape) / 2);
+    transform: translate(-10%, -50%);
+    width: 30vw;
+    max-width: var(--wheel-size-landscape);
+
+    @include respond-above(xmedium) {
+      transform: translate(0, -50%);
+    }
+  }
 }

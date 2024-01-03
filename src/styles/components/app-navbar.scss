@@ -3,7 +3,6 @@
   z-index: var(--z-app-navbar);
   height: var(--app-navbar-height);
   width: 100%;
-  max-width: calc(to-rem(440) + var(--container-side-padding) * 2);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: to-rem(15) to-rem(10);
@@ -13,20 +12,30 @@
   background-color: transparent;
   color: var(--col-red);
 
-  @include respond-above(tablet) {
-    max-width: calc(to-rem(1000) + var(--container-side-padding) * 2);
+  @media (orientation: portrait) {
+    max-width: calc(to-rem(440) + var(--container-side-padding) * 2);
+  }
+
+  @media (orientation: landscape) {
     align-items: center;
     justify-content: space-between;
+  }
+
+  @include respond-above(tablet) {
+    max-width: calc(to-rem(1000) + var(--container-side-padding) * 2);
   }
 }
 
 .app-navbar__logo-wrapper {
-  width: 100%;
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
 
-  @include respond-above(tablet) {
+  @media (orientation: portrait) {
+    width: 100%;
+  }
+
+  @media (orientation: landscape) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,9 +48,11 @@
   height: to-rem(32);
   width: to-rem(162);
 
-  @include respond-above(tablet) {
-    height: to-rem(55);
-    width: to-rem(284);
+  @media (orientation: landscape) {
+    @include respond-above(medium) {
+      height: to-rem(55);
+      width: to-rem(284);
+    }
   }
 }
 
