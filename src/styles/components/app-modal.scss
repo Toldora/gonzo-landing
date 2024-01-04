@@ -50,6 +50,7 @@
     max-height: vh(95);
     background-color: var(--col-gordons-green);
     border-radius: to-rem(16);
+    filter: drop-shadow(0 0 to-rem(12) rgba(var(--col-total-black-rgb), 24%));
   }
 }
 

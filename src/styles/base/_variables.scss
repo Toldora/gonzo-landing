@@ -23,6 +23,8 @@
   --col-algal-fuel-rgb: #{$col-algal-fuel-rgb};
   --col-gordons-green: #{$col-gordons-green};
   --col-kuro-green: #{$col-kuro-green};
+  --col-alpine-salamander: #{$col-alpine-salamander};
+  --col-alpine-salamander-rgb: #{$col-alpine-salamander-rgb};
   --col-rich-olive: #{$col-rich-olive};
   --col-vermilion-cinnabar: #{$col-vermilion-cinnabar};
   --col-radiant-silver: #{$col-radiant-silver};
@@ -102,11 +104,11 @@
   }
 
   // App overlay
-  --app-overlay-bg: rgba(#{$col-total-black-rgb}, 88%);
+  --app-overlay-bg: rgba(var(--col-alpine-salamander-rgb), 75%);
 
   // Auth type radio
-  --auth-type-radio-bg-hover: rgba(#{$col-total-white-rgb}, 15%);
-  --auth-type-radio-bg-checked: rgba(#{$col-total-white-rgb}, 35%);
+  --auth-type-radio-bg-hover: rgba(var(--col-total-white-rgb), 15%);
+  --auth-type-radio-bg-checked: rgba(var(--col-total-white-rgb), 35%);
 
   // Wheel
   @media (orientation: portrait) {
