@@ -1,5 +1,5 @@
 import { globalState } from '@/js/global-state';
-// import { setToLS } from '@/js/local-storage';
+import { setToLS } from '@/js/local-storage';
 import { openSignUpModal } from '@/js/sign-up';
 
 const wheelRef = document.querySelector('.js-wheel');
@@ -56,7 +56,8 @@ const onClickWheel = () => {
         bonusTriesRef.textContent = '0';
         globalState.wheelStage += 1;
 
-        // setToLS('isLastStage', globalState.isLastStage);
+        setToLS('isLastStage', globalState.isLastStage);
+
         setTimeout(() => {
           openSignUpModal({ isBlocked: true });
         }, 500);
@@ -73,7 +74,7 @@ const onClickWheel = () => {
 
 export const setWheelLastStage = () => {
   bodyRef.classList.add('wheel-stage-3');
-  bodyRef.classList.remove('wheel-stage-1');
+  bodyRef.classList.remove('wheel-stage-1', 'wheel-stage-2');
   bonusesSectionRef.classList.add(
     'bonuses-section--visible-first-bonus',
     'bonuses-section--visible-second-bonus',

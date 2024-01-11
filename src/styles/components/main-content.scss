@@ -50,10 +50,8 @@
 
   @include hover {
     body:not(.wheel-stage-3) & {
-      transform: scale(1.1);
       box-shadow: 0 to-rem(4) to-rem(40) 0 var(--col-pantone);
       cursor: pointer;
-
       transform: translateY(-50%) scale(1.1);
 
       @include respond-above(tablet) {

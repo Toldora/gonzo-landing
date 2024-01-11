@@ -86,13 +86,13 @@
   }
 
   .wheel--spinning-1 & {
-    animation-name: spinToStageTwo;
+    animation-name: spin-to-stage-two;
     animation-duration: 4s;
     animation-iteration-count: 1;
   }
 
   .wheel--spinning-2 & {
-    animation-name: spinToStageThree;
+    animation-name: spin-to-stage-three;
     animation-duration: 4s;
     animation-iteration-count: 1;
     transform: rotate(-25deg);
@@ -130,7 +130,6 @@
   top: 2.5%;
   left: 50%;
   transform: translateX(-50%);
-
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -187,7 +186,7 @@
   }
 }
 
-@keyframes spinToStageTwo {
+@keyframes spin-to-stage-two {
   0% {
     transform: translate(-50%, -50%) rotate(4deg);
   }
@@ -205,7 +204,7 @@
   }
 }
 
-@keyframes spinToStageThree {
+@keyframes spin-to-stage-three {
   0% {
     transform: translate(-50%, -50%) rotate(1084deg);
   }

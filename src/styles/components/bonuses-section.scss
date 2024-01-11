@@ -64,6 +64,7 @@
     z-index: var(--z-hidden);
 
     @include bg-img-webp('/img/bonus-section-bg');
+
     background-repeat: no-repeat;
     background-size: cover;
   }
